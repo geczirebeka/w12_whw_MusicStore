@@ -1,4 +1,25 @@
 package instruments;
 
-public class Instrument {
+public abstract class Instrument {
+    private String material;
+    private String colour;
+    private InstrumentType instrumentType;
+
+    public Instrument(String material, String colour, InstrumentType instrumentType) {
+        this.material = material;
+        this.colour = colour;
+        this.instrumentType = instrumentType;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public InstrumentType getInstrumentType() {
+        return instrumentType;
+    }
 }
