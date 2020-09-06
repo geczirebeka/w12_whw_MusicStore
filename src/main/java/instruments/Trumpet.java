@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Trumpet extends Instrument implements IPlay {
+public class Trumpet extends Instrument implements IPlay, ISell {
 
     private int numberOfValves;
     private String description;
@@ -35,5 +36,9 @@ public class Trumpet extends Instrument implements IPlay {
 
     public String play() {
         return "Tululululuuu";
+    }
+
+    public double calculateMarkup() {
+        return sellingPrice -= buyingPrice;
     }
 }

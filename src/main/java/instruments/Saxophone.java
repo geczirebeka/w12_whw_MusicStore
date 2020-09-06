@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Saxophone extends Instrument implements IPlay {
+public class Saxophone extends Instrument implements IPlay, ISell {
 
     private String description;
     private double buyingPrice;
@@ -29,5 +30,9 @@ public class Saxophone extends Instrument implements IPlay {
 
     public String play() {
         return "Tu, tu tu tuuu";
+    }
+
+    public double calculateMarkup() {
+        return sellingPrice -= buyingPrice;
     }
 }
