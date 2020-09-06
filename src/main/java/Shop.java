@@ -13,12 +13,21 @@ public class Shop {
         return stock;
     }
 
+
     public void addItemToStock(ISell item) {
         stock.add(item);
     }
 
     public void removeItemFromStock(ISell item) {
         stock.remove(item);
+    }
+
+    public double totalProfit() {
+        double total = 0.00;
+        for (ISell item : stock) {
+            total += item.calculateMarkup();
+        }
+        return total;
     }
 
 
