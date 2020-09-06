@@ -1,15 +1,12 @@
-package instruments;
+package items;
 
-import behaviours.IPlay;
-
-public class Saxophone extends Instrument implements IPlay {
+public class SheetMusic {
 
     private String description;
     private double buyingPrice;
     private double sellingPrice;
 
-    public Saxophone(String material, String colour, InstrumentType instrumentType, String description, double buyingPrice, double sellingPrice) {
-        super(material, colour, instrumentType);
+    public SheetMusic(String description, double buyingPrice, double sellingPrice) {
         this.description = description;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
@@ -25,9 +22,5 @@ public class Saxophone extends Instrument implements IPlay {
 
     public double getSellingPrice() {
         return sellingPrice;
-    }
-
-    public String play() {
-        return "Tu, tu tu tuuu";
     }
 }

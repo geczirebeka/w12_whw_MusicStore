@@ -11,7 +11,7 @@ public class TrumpetTest {
 
     @Before
     public void before() {
-        trumpet = new Trumpet("Brass", "Gold", InstrumentType.BRASS, 3);
+        trumpet = new Trumpet("Brass", "Gold", InstrumentType.BRASS, 3, "trumpet", 350.00, 500.00);
     }
 
     @Test
@@ -32,5 +32,25 @@ public class TrumpetTest {
     @Test
     public void hasNumberOfValves() {
         assertEquals(3, trumpet.getNumberOfValves());
+    }
+
+    @Test
+    public void hasDescription() {
+        assertEquals("trumpet", trumpet.getDescription());
+    }
+
+    @Test
+    public void hasBuyingPrice() {
+        assertEquals(350.00, trumpet.getBuyingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(500.00, trumpet.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Tululululuuu", trumpet.play());
     }
 }
