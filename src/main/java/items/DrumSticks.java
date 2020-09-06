@@ -1,6 +1,8 @@
 package items;
 
-public class DrumSticks {
+import behaviours.ISell;
+
+public class DrumSticks implements ISell {
     private String description;
     private double buyingPrice;
     private double sellingPrice;
@@ -21,5 +23,9 @@ public class DrumSticks {
 
     public double getSellingPrice() {
         return sellingPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellingPrice -= buyingPrice;
     }
 }

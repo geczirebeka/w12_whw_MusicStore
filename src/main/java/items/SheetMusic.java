@@ -1,6 +1,8 @@
 package items;
 
-public class SheetMusic {
+import behaviours.ISell;
+
+public class SheetMusic implements ISell {
 
     private String description;
     private double buyingPrice;
@@ -22,5 +24,9 @@ public class SheetMusic {
 
     public double getSellingPrice() {
         return sellingPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellingPrice -= buyingPrice;
     }
 }

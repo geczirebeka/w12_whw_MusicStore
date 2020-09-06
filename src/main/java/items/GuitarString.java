@@ -1,6 +1,8 @@
 package items;
 
-public class GuitarString {
+import behaviours.ISell;
+
+public class GuitarString implements ISell {
 
     private String description;
     private double buyingPrice;
@@ -22,5 +24,9 @@ public class GuitarString {
 
     public double getSellingPrice() {
         return sellingPrice;
+    }
+
+    public double calculateMarkup() {
+        return sellingPrice -= buyingPrice;
     }
 }

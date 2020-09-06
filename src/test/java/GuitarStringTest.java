@@ -28,4 +28,9 @@ public class GuitarStringTest {
     public void hasSellingPrice() {
         assertEquals(2.50, guitarString.getSellingPrice(), 0.01);
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(0.50, guitarString.calculateMarkup(), 0.01);
+    }
 }
